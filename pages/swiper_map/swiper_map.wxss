@@ -1,0 +1,50 @@
+/* swiper&map.wxss */
+.container{
+  padding: 0;
+}
+.swiper-container{
+  width: 100%;
+  position: relative;  
+  height: 300rpx; 
+}
+.map-container{
+  width: 100%;
+  height: calc(100% - 300rpx);
+  box-sizing: border-box;
+}
+.swiper-container .swiper{  
+  height: 100%;  
+  /*border: 3rpx solid red;*/
+}  
+.swiper-container .swiper .img{  
+  width: 100%;  
+  height: 100%;  
+}  
+.swiper-container .dots{  
+  position: absolute;  
+  right: 40rpx;  
+  bottom: 20rpx;  
+  display: flex;  
+  justify-content: center;  
+}  
+.swiper-container .dots .dot{  
+  margin: 0 10rpx;  
+  width: 28rpx;  
+  height: 28rpx;  
+  background: #fff;  
+  border-radius: 50%;  
+  transition: all .6s;  
+  font: 300 18rpx/28rpx "microsoft yahei";  
+  text-align: center;  
+}  
+.swiper-container .dots .dot.active{  
+  background: #f80;  
+  color:#fff;  
+} 
+map{
+ 
+  height: 100%;
+  width: 100%;
+  /*border: 1rpx solid blue;*/
+  /*box-sizing: border-box;*/
+}

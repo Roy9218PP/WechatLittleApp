@@ -1,0 +1,13 @@
+/* video.wxss */
+.tc{
+  width: 100vw;
+  margin: 1rem 0 2rem 0;
+}
+video{
+  width: 100%;
+}
+.danmuInput{
+  height: 3rem;
+  background-color: whitesmoke;
+  
+}

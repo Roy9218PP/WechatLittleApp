@@ -1,0 +1,149 @@
+/**index.wxss**/
+.container{
+  /*background-color: red;*/
+  /* background-image: url(../../imgs/27.jpg); */
+ 
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: lightgrey;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  /*border: 3rpx solid orange;*/
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.loginAndRegisterBtn{
+
+  /* background-color: red; */
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.loginBtn,.registerBtn{
+
+  width: 40%;
+  height: 3.5rem;
+  background-color: lightseagreen;
+  line-height: 3.5rem;
+  text-align: center;
+  color: white;
+  border-radius: 0.5rem;
+}
+.registerBtn{
+
+  background-color: lightcoral;
+}
+/*mask*/
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  /*opacity: 0.5;*/
+  overflow: hidden;
+}
+
+/*content*/
+.drawer_box {
+  width: 650rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: #FAFAFA;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+}
+
+.drawer_title{
+  padding:15px;
+  font: 17px "microsoft yahei";
+  text-align: center;
+  background-color: #456789;
+  color: white;
+}
+.drawer_content_register ,
+.drawer_content_login{
+  height: 210px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+.drawer_content_login{
+   height: 100px;
+}
+
+.btn_ok{
+  padding: 10px;
+  font: 1.5rem "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #E8E8EA;
+  color: white;
+  background-color: #456789;
+}
+
+.top{
+	padding-top:8px;
+}
+.bottom {
+	padding-bottom:8px;
+}
+.title {
+	height: 30px;
+	line-height: 30px;
+	width: 160rpx;
+	text-align: center;
+	display: inline-block;
+	font: 300 28rpx/30px "microsoft yahei";
+}
+
+.input_base {
+	border: 2rpx solid #ccc;
+	padding-left: 10rpx;
+	margin-right: 50rpx;
+}
+.input_h30{
+	height: 30px;
+	line-height: 30px;
+}
+.input_h60{
+	height: 60px;
+}
+.input_view{
+	font: 12px "microsoft yahei";
+	background: #fff;
+	color:#000;
+	line-height: 30px;
+}
+
+input {
+	font: 12px "microsoft yahei";
+	background: #fff;
+	color:#000 ;
+}
+radio{
+	margin-right: 20px;
+}
+.grid { display: -webkit-box; display: box; }
+.col-0 {-webkit-box-flex:0;box-flex:0;}
+.col-1 {-webkit-box-flex:1;box-flex:1;}
+.fl { float: left;}
+.fr { float: right;}

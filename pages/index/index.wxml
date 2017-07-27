@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<!--注意：不要使用空注释-->
+<!--view 相当于div-->
+<view class="container">
+  <!--
+  bindtap是绑定的tap事件(轻触)
+  bindlongtap:长按事件
+  -->
+  <view bindtap="bindViewTap" class="userinfo" bindlongtap="changeAvatar">
+
+    <text>长按选取头像</text>
+
+    <!--image引入图片相当于img-->
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+
+    <!--text相当于p-->
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <!--欢迎信息  -->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <!--登录注册按钮  -->
+  <view class="loginAndRegisterBtn">
+    <view class="registerBtn" bindtap="goRegister" data-statu="open">注册</view>
+    <view class="loginBtn" bindtap="goLogin" data-statu="open">登录</view>
+  </view>
+
+  <!--mask-->
+  <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}">
+    
+    <!--content-->
+    <!--使用animation属性指定需要执行的动画-->
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+      <!--drawer content-->
+      <view class="drawer_title">{{title}}</view>
+
+      <!--注册页面  -->
+      <form bindsubmit="registerFormSubmit" bindreset="registerFormReset" wx:if="{{!isLogin}}">
+        <view class="drawer_content_register">
+          <view class="top grid">
+            <label class="title col-0">姓名</label>
+            <input class="input_base input_h30 col-1" name="name" value="{{userInfo.nickName}}" placeholder="请输入用户名"></input>
+          </view>
+          <view class="top grid">
+            <label class="title col-0">手机</label>
+            <input class="input_base input_h30 col-1" name="phone" value="{{userInfo.phone}}" placeholder="18538578306"></input>
+          </view>
+          <view class="top grid">
+            <label class="title col-0">邮箱</label>
+            <input class="input_base input_h30 col-1" name="email" value="" placeholder="请输入邮箱"></input>
+          </view>
+          <view class="top grid">
+            <label class="title col-0">密码</label>
+            <input class="input_base input_h30 col-1" name="psw" type="password" placeholder="请输入密码"></input>
+          </view>
+          <view class="top bottom grid">
+            <label class="title col-0">确认密码</label>
+            <input class="input_base input_h30 col-1" name="psw" type="password" placeholder="请确认密码"></input>
+          </view>
+
+        </view>
+        <view class="btn_ok" bindtap="powerDrawer" data-statu="close">
+          <button plain="true"  formType="submit" style="border:none;color:white;" bindtap="okClick">确 定</button>
+        </view>
+      </form>
+
+      <!--登录页面-->
+      <form bindsubmit="loginFormSubmit" bindreset="loginFormReset" wx:if="{{isLogin}}">
+        <view class="drawer_content_login">
+          <view class="top grid">
+            <label class="title col-0">姓名</label>
+            <input class="input_base input_h30 col-1" name="name" value="{{userInfo.nickName}}" placeholder="请输入用户名"></input>
+          </view>
+
+          <view class="top grid">
+            <label class="title col-0">密码</label>
+            <input class="input_base input_h30 col-1" name="psw" type="password" placeholder="请输入密码"></input>
+          </view>
+
+        </view>
+        <view class="btn_ok" bindtap="powerDrawer" data-statu="close">
+          <button plain="true"  formType="submit" style="border:none;color:white;" bindtap="okClick">确 定</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--swiper&map.wxml-->
+
+<view class="container">
+  <view class="swiper-container">
+    <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" bindtap="goVideo">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">
+          <image src="{{item.picUrl}}" class="img" mode="scaleToFill"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="dots">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}" bindtap="chuangEvent" id="{{index}}">{{index+1}}</view>
+      </block>
+    </view>
+  </view>
+
+  <view class="map-container">
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location></map>
+  </view>
+</view>

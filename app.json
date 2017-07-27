@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/video/video",
+    "pages/swiper_map/swiper_map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#456789",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#FFF"
+  }
+}
